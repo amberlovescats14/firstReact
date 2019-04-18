@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import UniqueId from 'react-html-id'
 
 class App extends Component {
   constructor(props) {
     super(props);
+    UniqueId.enableUniqueIds(this);
     this.state = {
       toDos: [],
       id: 0,
       title: 'To Do List',
       typing: false,
       userHasClicked: 0,
-      inputValue: ' '
+      inputValue: ' ',
+      showLi : false
     }
   }
   handleInput = (e) =>{
@@ -32,6 +35,13 @@ class App extends Component {
     this.setState({typing: false});
 
   }
+  handleDelete = (e) => {
+    let button = e.target;
+    {
+     button.parentElement.remove(this)
+    }
+  }
+
 
 
   render() {
@@ -51,10 +61,13 @@ class App extends Component {
           <p className='list'>
             <code>src/App.js</code> 
           </p>
-          <button onClick= {this.handleClick} >Add </button>
+          <button className="add" onClick= {this.handleClick} >Add </button>
           <ol>
           {this.state.toDos.map((item)=>{
-            return <li>{item.toUpperCase()}</li>
+            return <li className='li'>{item.toUpperCase()} 
+            
+            <button className="x" onClick={this.handleDelete}>X</button></li>
+
           })}
           </ol>
         </header>

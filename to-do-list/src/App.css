@@ -26,12 +26,17 @@ input {
   height:10vh;
   width: 30vw;
   font-size: 3vh;
+  text-align: center;
 }
 li {
   color: #61dafb
 }
-button {
+.add {
   width: 10vw;
+}
+.x {
+  margin-left: 5px;
+  margin-bottom: 10px;
 }
 @keyframes App-logo-spin {
   from {
