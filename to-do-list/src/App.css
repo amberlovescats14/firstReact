@@ -46,3 +46,8 @@ li {
     transform: rotate(360deg);
   }
 }
+.beerName {
+  color: yellow;
+  font-weight: 800;
+  
+}
