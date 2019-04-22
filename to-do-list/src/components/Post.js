@@ -39,9 +39,10 @@ export default class Post extends Component {
       fontWeight: 800,
       margins: 0,
       padding: 0,
+      color: '#6dadc7',
     }
     const style2 = {
-      color: ' green',
+      color: ' #46746e',
       fontFamily: 'cursive'
 
     }

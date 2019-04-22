@@ -60,19 +60,16 @@ class App extends Component {
     } else {
       message = ''
     }
-    return ( <
-      div className = "App" >
-      <
-      header className = "App-header" >
+    return ( 
+      <div className = "App" >
+      <header className = "App-header" >
       <
       img src = "https://austincodingacademy.com/assets/images/logo-aca-white.png "
       className = "App-logo"
       alt = "logo" / >
-      <
-      h1 > To Do List < /h1> <
-      h4 > {
+      <h1 > To Do List </h1> <h4> {
         message
-      } < /h4> <
+      } </h4> <
       input type = 'text'
       onChange = {
         this.handleInput
@@ -80,16 +77,11 @@ class App extends Component {
       value = {
         this.state.inputValue
       }
-      /> <
-      p className = 'list' >
-      <
-      code > src / App.js < /code>  <
-      /p> <
-      button className = "add"
+      /> <p className = 'list' >
+      </p> <button className = "add"
       onClick = {
         this.handleClick
-      } > Add < /button> <
-      ol > {
+      } > Add </button> <ol > {
         this.state.toDos.map((item, index) => {
           return <li className = 'li'
           key = {
@@ -105,16 +97,14 @@ class App extends Component {
           }
           onClick = {
               this.handleDelete
-            } > X < /button></li >
+            } > X </button></li>
 
         })
-      } <
-      /ol> <
-      Post > < /Post>
+      } </ol> 
+      </header>
+      <Post > </Post>
 
-      <
-      /header> <
-      /div>
+       </div>
     );
   }
 }
