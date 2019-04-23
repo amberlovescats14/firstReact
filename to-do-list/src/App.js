@@ -46,9 +46,9 @@ class App extends Component {
 
   }
   handleDelete = (e) => {
-    let button = e.target; {
+    let button = e.target; 
       button.parentElement.remove(this)
-    }
+    
   }
 
 

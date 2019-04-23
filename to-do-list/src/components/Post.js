@@ -53,7 +53,7 @@ export default class Post extends Component {
         this.state.apItem.map((beer, i) => {
           return <li key = {i}>
             <p className = "beerName"> {beer.name} </p> 
-            <p style = {style}> "{beer.tagline}" </p> 
+            <p style = {style2}> "{beer.tagline}" </p> 
             {beer.description} 
             <br/>
             <button key = {i}
