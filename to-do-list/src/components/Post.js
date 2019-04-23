@@ -46,50 +46,29 @@ export default class Post extends Component {
       fontFamily: 'cursive'
 
     }
-    return ( <
-      div className = "beer" >
-      <
-      ul > < h1 style = {
-        style
-      } > Beers of the South < /h1> {
+    return ( 
+    <div className = "beer">
+      <ul> 
+        <h1 style = {style} > Beers of the South </h1> {
         this.state.apItem.map((beer, i) => {
-          return <li key = {
-              i
-            } >
-            <
-            p className = "beerName" > {
-              beer.name
-            } < /p> <
-            p style = {
-              style2
-            } > "{beer.tagline}" < /p> {
-              beer.description
-            } < br / >
-            <
-            button key = {
-              i
-            }
-          className = {
-            beer.id
-          }
-          onClick = {
-              this.handleLike
-            } > Like < /button>  <
-            div id = {
-              beer.id
-            }
-          key = {
-              beer.id
-            } > {
-              this.state.count
-            } <
-            /div> <
-            /li>
+          return <li key = {i}>
+            <p className = "beerName"> {beer.name} </p> 
+            <p style = {style}> "{beer.tagline}" </p> 
+            {beer.description} 
+            <br/>
+            <button key = {i}
+          className = {beer.id}
+          onClick = {this.handleLike} > Like </button>  
+          <div id = {beer.id}
+          key = {beer.id}>
+             {this.state.count} 
+             </div> 
+             </li>
 
         })
-      } <
-      /ul> <
-      /div>
+      } 
+      </ul> 
+      </div>
     );
   }
 }
